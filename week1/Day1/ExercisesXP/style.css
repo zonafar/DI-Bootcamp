@@ -1,0 +1,40 @@
+span{
+    background-color: yellow;
+}
+.sense{
+    text-decoration: underline;
+}
+hr{
+    height: 2px;
+    background-color: #e5e5e5;
+    border: none;
+}
+
+img{
+    border: 5px solid rgb(226, 152, 15);
+    height: 200px;
+    weight : 200px;
+}
+.image,.lion{
+    display:flex;
+    justify-content : center;
+}
+.media{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+.difference{
+    display:flex;
+    justify-content : center;
+    border: 3px red solid;
+    color: red;
+    margin-bottom: 25px;
+}
+.comparaison{width: 90%;margin: auto;}
+table{width: 100%;}
+table,th,td{
+    border: solid rgba(0, 0, 0, 0.671) 1px;
+    border-collapse: collapse;
+    margin-bottom: 10%;
+}

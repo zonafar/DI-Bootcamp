@@ -1,0 +1,74 @@
+*{margin: 0;padding:0;box-sizing: border-box;}
+/* navigation */
+.logo img{width:50px;height:50px}
+img{object-fit: cover;}
+
+nav.navigation {width: 20%;height: 100%;display: flex;flex-direction: column;position:fixed; background-color: rgb(228, 228, 228);}
+nav.navigation ul{margin-top: 25px;}
+nav.navigation ul li{display: flex;align-items: center;padding: 12px 25px;}
+nav.navigation ul li:hover{background-color: rgb(156, 156, 156);cursor: pointer;color: black;}
+.active {background-color: rgb(189, 187, 184);}
+.logo{margin-left: 40%;}
+a{text-decoration: none;padding: 5px;}
+nav.navigation ul li a span{padding: 0 15px;font-size: 20px;color: rgb(69, 69, 204);}
+
+/* content */
+.content,.content img{background-color: rgb(49, 85, 85);width:100%;height:100vh}
+.content_text{    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size:medium;color:aliceblue;text-align: center;
+}
+/* pied de page */
+
+/* Responsivité */
+@media screen and (max-width: 990px) {
+    nav.navigation  {
+      width: 100%;
+      padding: 0px;
+      position: relative;
+      display: flex;justify-content: space-between;flex-direction: row;align-items: center; background-color: rgb(228, 228, 228);
+    }
+
+/* nav.navigation ul{margin-top: 25px;} */
+nav.navigation ul {display: flex;justify-content: space-between;flex-direction: row;align-items: center;padding: 10px ;height: 8vh;margin: 10px;}
+nav.navigation ul li:hover{background-color: rgb(156, 156, 156);cursor: pointer;color: black;}
+.active {background-color: rgb(189, 187, 184);}
+.logo{margin-left: 0px}
+a{text-decoration: none;padding: 0;}
+nav.navigation ul li a span{padding: 0;font-size: 15px;color: rgb(69, 69, 204);}
+    
+/* content */
+.content_text{    
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-size:medium;color:aliceblue;text-align: center;
+}
+  }
+  
+  @media screen and (max-width: 600px) {
+    ul.sidenav li a {
+      text-align: center;
+      float: none;
+    }
+    nav.navigation  {
+        width: 100%;
+        padding: 0px;
+        position: relative;
+        display: flex;justify-content:center;flex-direction: column;align-items: center; background-color: rgb(228, 228, 228);
+      }
+      nav.navigation ul {display: flex;justify-content: space-between;flex-direction: column;align-items: center;padding: 10px ;height: 30vh;margin: 10px;}
+      /* content */
+.content_text{    
+    object-fit: cover;
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-size:small;color:aliceblue;text-align: center;
+}
+  } 

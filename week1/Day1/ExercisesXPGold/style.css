@@ -1,0 +1,34 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+body{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+/* header */
+header{width: 100%;height: 8vh;background-color: rgb(245, 252, 255);}
+.menu{display: flex;justify-content: space-around;align-items: center;}
+button{color:aliceblue;background-color: rgb(5, 90, 146);border-radius: 5px;border : none;padding: 6px; cursor:pointer;}
+/* content */
+.content{width: 100%;height: calc(100vh - 40vh);background-color: rgb(51, 73, 73);}
+img{width: 100%;height: calc(100vh - 40vh);object-fit: cover;}
+.text{font-size:xx-large;color:aliceblue;text-align: center;}
+.form{display: flex; margin: 20px auto}
+.form button{padding: 6px 15px; }
+input{width: 300px;height:30px;border-style: none;padding: 10px; margin-right: 10px;border-radius: 5px;}
+input:focus{border:none}
+.text-form{
+    width: 600px;
+    height:400px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  /* footer */
+  footer{width: 100%;height: calc(100vh - 68vh);background-color: rgb(197, 216, 224);}
+.foot{display: flex;justify-content:center;align-items:flex-end;}
+.card{width: 250px;height:150px;padding: 2%;}
+.card{display: flex;flex-direction: column;justify-content :center;}
+.icone{margin: 5px auto;padding-bottom: 10px; color:dodgerblue}
+h3{text-align: center;font-size:medium;}
+.comment{font-size:smaller;text-align: center;color: rgb(133, 130, 130);}
+/* .card{display: flex;justify-content :center;flex-direction: column;align-items:flex-end;} */
