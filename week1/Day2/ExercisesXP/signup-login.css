@@ -1,0 +1,13 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+body{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif}
+
+/* formulaire */
+div.content{width: 26%;height: 500px;margin: 35px auto;background-color: #f6f8fa;border: 1px solid #d0d7de;border-radius: 5px;padding: 5px;padding-top: 25px;}
+input{display: block;width:80%;margin: 10px auto ;height: 30px;border: 1px solid #d0d7de;border-radius: 5px;padding: 5px;}
+input:focus{border:3px solid #557fe3}
+label{margin-left: 10%;font-size: small;color:#24292f}
+form{margin: auto;}
+button{color:aliceblue;background-color: #2da44e;border-radius: 5px;border : none; cursor:pointer;display: block;width:80%;margin: 20px auto;height: 30px;padding: 5px;}
+/* formulaire login */
+div.content.login{height: 300px;margin: 100px auto; padding-top: 25px;}
+

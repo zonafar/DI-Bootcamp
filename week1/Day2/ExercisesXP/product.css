@@ -1,0 +1,16 @@
+*{margin:0;padding: 0;box-sizing: border-box;}
+div.content{font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif}
+/* contenu */
+.card{display: inline-block;margin: 10px 40px;}
+.card-img{position: relative;width: 250px;height: 300px;}
+.card-img img{width: 250px;height: 300px;}
+.card-text{width: 250px; text-align: center;padding: 10px;}
+p.ct-title{font-size:small;padding: 4px;}
+.old{font-size:small;}
+.new{font-size: large;font-weight: 300;color: #16a085}
+button.btn{border: 1px solid rgb(223, 223, 223);padding: 7px;margin-top: 10px;cursor: pointer;color: rgb(143, 144, 145);background-color: white;}
+
+/* Deco cart */
+.cercle{background-color: rgba(10, 10, 10, 0.534);width:50px;height: 50px;border-radius: 50%;color: white;text-align: center;padding-top: 16px}
+.vert{background-color: #16a085;font-weight: bold;  position: absolute;left: 5px;top: 16px;}
+.rouge{background-color: #d7292a;font-weight: bold;position: absolute;right: 5px;top: 16px;}

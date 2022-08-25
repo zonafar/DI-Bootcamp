@@ -1,0 +1,76 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+
+body{font-family: system-ui,'Segoe UI', Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;}
+
+/* MENUE */
+.general{position: relative;display:inline-block;}
+.navi div.logo img{width: 80px;height: 50px;margin-left: 55px;margin-bottom: 70px;margin-top: 10px;}    
+.navi{position: fixed;width: 200px;height: 100vh;background-color: C1DAF3;}
+
+
+.navi a{  
+    display: block;
+    color: black;
+    padding: 10px 2px;
+    text-decoration: none;
+text-align: center;}
+.navi a:hover{background-color: rgba(23, 63, 19, 0.493)}
+.active{background-color: rgba(23, 63, 19, 0.801);}
+
+/* CONTENU */
+.content{margin-left: 200px;height: 100%;position: relative;}
+.content img{width: calc(100vw - 200px);height:100vh;object-fit: cover;}
+.content_text{position: absolute;top: 30%;left: 30%;margin:auto;width: 50%;color: white;overflow: hidden;}
+
+/* Responsivité */
+@media all and (min-width: 768px) { 
+    h2{font-size: 35px;color: red;}
+}
+
+/* ***grand */
+@media all and (min-width: 1024px) {
+    .navi{background-color: black}
+    .navi a{ color: white;}
+    .navi div.logo img{width: 110px;height: 50px} 
+    .navi a:hover{background-color: rgba(114, 245, 102, 0.63)}
+    .active{background-color: rgba(114, 245, 102, 0.63)}
+    
+ }
+
+
+/* ***moyen */
+@media all and (min-width: 768px) and (max-width: 1024px) { }
+
+
+/* ***petit */
+@media all and (min-width: 480px) and (max-width: 768px) { 
+    /* MENUE */
+.general{display: block;}
+.navi{position: sticky;height: 12vh;width: 100%;background-color: lightgreen;color: black;text-align:end;}
+.navi div.logo img{float: left;width: 80px;height: 50px;margin: 10px;} 
+.navi a{ 
+    float: right;color: black;padding: 8px;text-decoration: none;text-align:end;
+    font-weight: bold;margin-top:18px;
+}
+.navi a:hover{background-color: lightgreen;}
+.active{background-color: lightgreen;;}
+    li{display:inline;}
+    /* CONTENU */
+    .content{margin-left: 0px;height: 100vh;position: static;}
+    .content img{width: 100%;height:100%;object-fit: cover;}
+    .content_text{position: absolute;top: 30%;left: 15%;margin:auto;width: 70%;color: white;overflow:auto;}
+}
+
+
+
+/* ***mini */
+@media all and (max-width: 480px) { 
+/* MENUE */
+.general{position: absolute;display: block;}
+.navi div.logo img{width: 80px;height: 50px;margin-left: 20px;margin-bottom: 10px;margin-top: 10px;} 
+.navi{position: sticky;height: 30%;width: 100%;background-color: yellow;color: black;display: block;font-weight: bolder;}
+/* CONTENU */
+.content{margin-left: 0px;height: 100vh;position: static;}
+.content img{width: 100%;height:100%;object-fit: cover;}
+.content_text{position: absolute;top: 30%;left: 15%;margin:auto;width: 70%;color: white;overflow:auto;}
+}
