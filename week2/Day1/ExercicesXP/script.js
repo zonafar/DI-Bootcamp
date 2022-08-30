@@ -47,15 +47,14 @@ console.log(cels + "°C is " + fahr+ "°F")
 let c;
 let a = 34;
 let b = 21;
-
-// console.log(a+b) //first expression
-// // Prediction: The output will be 55, cause we done additions of numbers
-// // Actual: 55
-// a = 2;
-// console.log(a+b) //second expression
-// // Prediction: The output is 23 because the variable a get new value 2
-// // Actual: 23
-// // The value of c is undefined
+console.log(a+b) //first expression
+// Prediction: The output will be 55, cause we done additions of numbers
+// Actual: 55
+a = 2;
+console.log(a+b) //second expression
+// Prediction: The output is 23 because the variable a get new value 2
+// Actual: 23
+// The value of c is undefined
 
 
 // /////////////////////////////////////
