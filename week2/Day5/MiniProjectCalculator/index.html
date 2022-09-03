@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="calc.css">
+    <style>
+      button {
+        width:70px;
+        height:70px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="content">
+        <div class="frame">
+            <div class="screen" id="screen">
+            </div>
+            <div class="zero">
+                <button type="button" name="button" onclick="number(0);">0</button>
+            </div>
+            <div class="un">
+                <button  type="button" name="button" onclick="number(1);">1</button>
+            </div>
+            <div class="deu">
+                <button type="button" name="button" onclick="number(2);">2</button>
+            </div>
+            <div class="troi">
+                <button type="button" name="button" onclick="number(3);">3</button>
+            </div>
+            <div class="qua">
+                <button type="button" name="button" onclick="number(4);">4</button>
+            </div>
+            <div class="cinq">
+                <button type="button" name="button" onclick="number(5);">5</button>
+            </div>
+            <div class="six">
+                <button type="button" name="button" onclick="number(6);">6</button>
+            </div>
+            <div class="sept">
+                <button type="button" name="button" onclick="number(7);">7</button>
+            </div>
+            <div class="huit">
+                <button type="button" name="button" onclick="number(8);">8</button>
+            </div>
+            <div class="neuf">
+                <button type="button" name="button" onclick="number(9);">9</button>
+            </div>
+            <div class="point">
+                <button type="button" name="button" onclick="operator('.');">.</button>
+            </div>
+            <div class="plus">
+                <button type="button" name="button" onclick="operator('+');">+</button>
+            </div>
+            <div class="moins">
+                <button type="button" name="button" onclick="operator('-');">-</button>
+            </div>
+            <div class="fois">
+                <button type="button" name="button" onclick="operator('*');">*</button>
+            </div>
+            <div class="sur">
+                <button type="button" name="button" onclick="operator('/');">/</button>
+            </div>
+            <div class="egal">
+                <!-- <button type="button" name="button" onclick="operator('=');">=</button> -->
+                <button type="button" name="button" onclick="equal();">=</button>
+            </div>
+            <div class="reset">
+                <button class="bt-long" type="button" name="button" onclick="reset();">reset</button>
+            </div>
+            <div class="clear">
+                <button class="bt-long" type="button" name="button" onclick="cleari();">clear</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="calculator.js" charset="utf-8"></script>
+</html>
