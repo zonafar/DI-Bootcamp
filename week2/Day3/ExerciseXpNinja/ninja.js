@@ -49,4 +49,4 @@ function decision(params) {
     }
 }
 
-findAvg([44,10,42,75,70]);
+findAvg([44,10,67,75,70]);
