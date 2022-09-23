@@ -23,6 +23,7 @@
 # 5. Use the born method inherited from the Family class to add Baby Jack with the following power: “Unknown Power”.
 # 6. Call the incredible_presentation method again.
 
+from inspect import _Object
 from Exercise1 import Family
 
 # print(Family)
@@ -62,3 +63,5 @@ famous_family.incredible_presentation()
 famous_family.born(name = "Jack",gender = "Male",is_child = True,age = 2,power = "Unknown_power",incredible_name = "BabyJack")
 famous_family.incredible_presentation()
 print("****** Fin *****")
+
+famous_family.mro()

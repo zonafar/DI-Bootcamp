@@ -58,9 +58,9 @@ class Zoo():
                         self.groups[key].append(animal)
                         isAdd = True
             if isAdd == False:
-                length = len(self.groups)
-                self.groups[length+1] = []
-                self.groups[length+1].append(animal)
+                taille = len(self.groups)
+                self.groups[taille+1] = []
+                self.groups[taille+1].append(animal)
         return self.groups
     def get_groups(self):
         for group in self.groups.values():
