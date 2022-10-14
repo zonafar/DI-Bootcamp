@@ -90,7 +90,7 @@ SELECT * FROM student WHERE last_name = 'Benichou' OR first_name ='Marc'
 SELECT * FROM student WHERE first_name LIKE '%a%';
 SELECT * FROM student WHERE first_name  ILIKE 'a%';
 SELECT * FROM student WHERE first_name  ILIKE '%a';
-SELECT * FROM student WHERE first_name  ILIKE '_%a%';
+SELECT * FROM student WHERE first_name  ILIKE '%a_';
 SELECT * FROM student WHERE student_id = 1  OR student_id = 3;
 SELECT * FROM student WHERE birth_date >= '1/01/2000';
 
