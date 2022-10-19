@@ -40,12 +40,12 @@ Created on Tue Sep 13 23:54:08 2022
 ##########################
 ### Exercise 4: Floats
 ##########################
-#import numpy as np
-#print(np.arange(1,2,0.1))
-#lst = []
-#for i in np.arange(1.5,5,0.5):
+# import numpy as np
+# print(np.arange(1,2,0.1))
+# lst = []
+# for i in np.arange(1.5,5,0.5):
 #    lst.append(i)
-#print(lst)
+# print(lst)
 
 ##########################
 ### Exercise 5: For loop

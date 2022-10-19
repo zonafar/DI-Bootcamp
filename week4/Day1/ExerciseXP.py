@@ -1,8 +1,6 @@
 # #####################
 # ### Exercise 1 : Hello World
 # #####################
-from ast import If
-
 
 print("Hello word\n"*4)
 

@@ -34,50 +34,50 @@
 ###  Exercise 3: Zara
 ##########################
 
-# brand = {
-#     "name": "Zara" ,
-#     "creation_date": 1975 ,
-#     "creator_name": "Amancio Ortega Gaona ",
-#     "type_of_clothes": ["men", "women", "children", "home"] ,
-#     "international_competitors": ["Gap", "H&M", "Benetton"] ,
-#     "number_stores": 7000 ,
-#     "major_color": 
-#     {
-#         "France": "blue", 
-#         "Spain": "red", 
-#         "US": ["pink", "green"]
-#     }
-# }
-# brand["number_stores"] = 2
-# name = brand["name"]
-# print(f"{name} clients are : ")
-# for i in brand["type_of_clothes"]:
-#     print(i)
-# brand.update({"country_creation":"Spain"})
-# if 'international_competitors' in brand.keys():
-#     brand["number_stores"] += 1
-# #  Delete date of creation
-# del brand["creation_date"]
-# # print(brand)
-# # Print the last international competitor.
-# print(brand["international_competitors"][-1])
-# # Print the major clothes colors in the US.
-# major_color = brand["major_color"]
-# print(major_color["US"])
-# # length of the dictionary
-# print(len(brand.items()))
-# # the keys of the dictionary
-# print(brand.keys())
-# #  Create another dictionary called more_on_zara
-# more_on_zara = {
-#     "creation_date": 1975,
-#     "number_stores": 10000
-# }
-# # add the information from the dictionary more_on_zara to the dictionary brand.
-# brand.update(more_on_zara)
-# print(len(brand.items()))
-# # the value of the key number_stores.
-# print(brand["number_stores"])
+brand = {
+    "name": "Zara" ,
+    "creation_date": 1975 ,
+    "creator_name": "Amancio Ortega Gaona ",
+    "type_of_clothes": ["men", "women", "children", "home"] ,
+    "international_competitors": ["Gap", "H&M", "Benetton"] ,
+    "number_stores": 7000 ,
+    "major_color": 
+    {
+        "France": "blue", 
+        "Spain": "red", 
+        "US": ["pink", "green"]
+    }
+}
+brand["number_stores"] = 2
+name = brand["name"]
+print(f"{name} clients are : ")
+for i in brand["type_of_clothes"]:
+    print(i)
+brand.update({"country_creation":"Spain"})
+if 'international_competitors' in brand.keys():
+    brand["number_stores"] += 1
+#  Delete date of creation
+del brand["creation_date"]
+# print(brand)
+# Print the last international competitor.
+print(brand["international_competitors"][-1])
+# Print the major clothes colors in the US.
+major_color = brand["major_color"]
+print(major_color["US"])
+# length of the dictionary
+print(len(brand.items()))
+# the keys of the dictionary
+print(brand.keys())
+#  Create another dictionary called more_on_zara
+more_on_zara = {
+    "creation_date": 1975,
+    "number_stores": 10000
+}
+# add the information from the dictionary more_on_zara to the dictionary brand.
+brand.update(more_on_zara)
+print(len(brand.items()))
+# the value of the key number_stores.
+print(brand["number_stores"])
 
 ##########################
 ###  Exercise 4 : Disney Characters

@@ -18,28 +18,45 @@
 
 # Challenge 2
 # user = "cccccaaarrrbbonnnnn"
-user= input("Enter a string : ")
-user = list(user)
+# user= input("Enter a string : ")
+# user = list(user)
 
-def concat_list(list):
-    string=""
-    for i in list:
-        string += i
-    return string
+# def concat_list(list):
+#     string=""
+#     for i in list:
+#         string += i
+#     return string
 
-final = []
-for i,elem in enumerate(user):
-    cnt= i
-    repeat = elem
-    duplicate = 0
-    stp = 0
-    while elem == repeat:
-        duplicate += 1
-        cnt +=1
-        if cnt == len(user):
-            break
-        else:
-            repeat = user[cnt]
-    if duplicate  == 1:
-        final.append(elem)
-print(f"Final string with any duplicate consecutive letters : {concat_list(final)}")
+# final = []
+# for i,elem in enumerate(user):
+#     cnt= i
+#     repeat = elem
+#     duplicate = 0
+#     stp = 0
+#     while elem == repeat:
+#         duplicate += 1
+#         cnt +=1
+#         if cnt == len(user):
+#             break
+#         else:
+#             repeat = user[cnt]
+#     if duplicate  == 1:
+#         final.append(elem)
+# print(f"Final string with any duplicate consecutive letters : {concat_list(final)}")
+
+# caractere = input("user's word: ")
+caractere = "cccccaaarrrbbonnnnn"
+n = len(caractere)
+print(n)
+caractere=list(caractere.rstrip())
+if n<2:
+    print(''.join(caractere))
+else:
+    j=0
+    for i in range(n):
+        if (caractere[j]!=caractere[i]):
+            j+=1
+            caractere[j]=caractere[i]
+    j+=1
+    caractere = caractere[:j]
+print(''.join(caractere))
