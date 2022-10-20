@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 import json
 
 # Create your views here.
@@ -24,3 +24,10 @@ def family(request,family_id):
     # raise Exception(f"I want to know the value of this: {context}")
     print(context)
     return render(request, "family.html", context)
+
+def animals(request):
+    context = {}
+    context['animals'] = data['animals']
+    # raise Exception(f"I want to know the value of this: {context}")
+    return render(request, "animals.html", context)
+    # return redirect('animal', animal_id = 'bar')

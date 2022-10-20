@@ -7,7 +7,8 @@
             "weight": 5.67,
             "height":4.2,
             "speed": 34,
-            "family": 2
+            "family": 2,
+            "img" : "images/pexels-chevanon-photography-1108099.jpg"
         },
         {
             "id": 2,
@@ -16,7 +17,8 @@
             "weight": 5.67,
             "height":4.2,
             "speed": 34,
-            "family": 1
+            "family": 1,
+            "img" : "images/pexels-pixabay-104827.jpg"
         },
         {
             "id": 3,
@@ -25,7 +27,8 @@
             "weight": 5.67,
             "height":4.2,
             "speed": 34,
-            "family": 1 
+            "family": 1,
+            "img" : ""
         },
         {
             "id": 4,
@@ -34,7 +37,8 @@
             "weight":  45,
             "height":15.0,
             "speed": 90,
-            "family": 3 
+            "family": 3, 
+            "img" : ""
         },
         {
             "id": 5,
@@ -43,7 +47,8 @@
             "weight": 150,
             "height":11.0,
             "speed": 35,
-            "family": 3 
+            "family": 3, 
+            "img" : ""
         }
     ],
     "families": [

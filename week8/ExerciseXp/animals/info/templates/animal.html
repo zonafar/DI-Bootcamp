@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +16,7 @@
         <h3> weight : {{ animal.weight }}</h3>
         <h3> height : {{ animal.height }}</h3>
         <h3> speed : {{ animal.speed }}</h3>
+        <img src="{% static animal.img  %}" alt="{{ animal.name }}" width="250" height="250" >
     {% endblock content %}
 </body>
 </html>
