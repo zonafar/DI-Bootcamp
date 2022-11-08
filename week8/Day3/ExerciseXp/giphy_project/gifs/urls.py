@@ -8,6 +8,9 @@ urlpatterns = [
     path('category/<int:id>/', views.category, name='gifs.category'),
     path('gif/<int:id>/', views.gif, name='gifs.gif'),
     path('categories/', views.categories, name='gifs.categories'),
-    # path('create gif/', views.create_gif, name='create_gif'),
+    path('populate/', views.populate, name='gifs.populate'),
+    path('like/<int:like_id>/', views.like, name='gifs.like'),
+    path('dislike/<int:dislike_id>/', views.dislike, name='gifs.dislike'),
+    path('total of like/', views.totallike, name='gifs.totallike'),
 ]
 

@@ -22,3 +22,10 @@ class CategoryForm(forms.ModelForm):
 	class Meta:
 		model = Category
 		fields = ['name']
+
+# class LikeForm(forms.ModelForm):
+# 	# specify the name of model to use
+# 	class Meta:
+# 		model = Gif
+# 		fields = ['likes']
+#         widgets = {'likes': forms.HiddenInput()}
