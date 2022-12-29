@@ -1,0 +1,35 @@
+{% extends 'partials/base.html'%}
+
+
+<!-- {% block nav %}
+    {% include 'partials/navbar.html' %}
+{% endblock %} -->
+
+
+{% block content%}
+<div style="display:flex;flex-direction: row;margin:15px">
+    
+    {% for film in films %}
+        <div class="card border-primary mb-3" style="max-width: 18rem;margin:10px">
+            <div class="card-header">Par {{ film.director.first.first_name }} {{ film.director.first.last_name }}</div>
+            <div class="card-body text-primary">
+              <h5 class="card-title">{{ film.title }}</h5>
+              <div>Date : {{ film.release_date }}</div>
+              <div>Category : {{ film.category.first.name }}</div>
+              <div>Country : {{ film.created_in_country.name }}</div>
+              <a href="">Modifier le film</a>
+            </div>
+            <div class="card-footer">
+                <a href="">Modifier le directeur</a>
+            </div>
+        </div>
+    {% endfor%}
+    </div>
+{% endblock %}
+<!-- title = models.CharField(max_length=100)
+release_date = models.DateField(default= timezone.now)
+created_in_country = models.ForeignKey(Country, on_delete = models.CASCADE)
+available_in_countries = models.ManyToManyField(Country,related_name='countries', blank=True)
+category = models.ManyToManyField(Category,related_name='categories')
+director -->
+
