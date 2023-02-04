@@ -1,0 +1,231 @@
+{% extends 'base.html' %}
+
+{% block title %}Annonces{% endblock %}
+
+{% load humanize %}
+{% block content %}
+<main class="mt-5">
+  <div class="row">
+
+    <div class="col-12 col-sm-12 col-md-12 col-xl-5 py-5 ">
+      <div class="container shadow w-75 py-5 mb-5  bg-body rounded mx-auto" style="padding: 50px;">
+        <form action="{% url 'search' %}" class="row g-3">
+          <div class="col-12">
+            <label for="keywords" class="form-label">Mots clés</label>
+            <input id="keywords" name="keywords" type="text" class="form-control" value="{{ values.keywords }}">
+          </div>
+          <div class="col-12">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="louer" checked>
+              <label class="form-check-label" for="inlineRadio1">Louer</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="vendre">
+              <label class="form-check-label" for="inlineRadio2">Vendre</label>
+            </div>
+          </div>
+          <div class="col-12">
+            <label for="categorie" class="form-label">Categorie</label>
+            <select id="categorie" name="categorie" class="form-select" value="{{ values.categorie }}">
+              <option disabled class="text-primary">RESIDENCE</option>
+              <option>Appartement</option>
+              <option>Celibatorium</option>
+              <option>Cours unique</option>
+              <option disabled class="text-primary">COMMERCIAL</option>
+              <option>Magasin</option>
+              <option>Boutique/restau</option>
+              <option>Bureau</option>
+              <option disabled class="text-primary">TERRAIN</option>
+              <option>Champ Agricole</option>
+              <option>Parcelle</option>
+              <option></option>
+            </select>
+          </div>
+          <div class="col-12">
+            <label for="taille" class="form-label">Taille (mètre carré)</label>
+            <input id="taille" name="taille" type="number" class="form-control" value="{{ values.taille }}">
+          </div>
+          <div class="col-md-6">
+            <label for="inputMin" class="form-label">Prix Min</label>
+            <input id="inputMin" name="inputMin" type="number" class="form-control" value="{{ values.inputMin }}">
+          </div>
+          <div class="col-md-6">
+            <label for="inputMax" class="form-label">Prix Max</label>
+            <input type="number" id="inputMax" name="inputMax" class="form-control" value="{{ values.inputMax }}">
+          </div>
+
+          <div class="d-grid gap-2 col-6 mx-auto mt-5">
+            <button class="btn btn-outline-dark" type="submit">Rechercher</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-12 col-md-12 col-xl-7 ">
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2  g-3">
+
+            {% if annonces %}
+              {% for annonce in annonces %}
+                <!-- debut card annonce -->
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="{{ annonce.photo_majeure.url  }}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <div class="card-body">
+                      <div class="fw-bold mb-2 text-success">XOF {{ annonce.prix }}/mois </div>
+                      <div class="card-text"> <span class="fw-bold ">{{ annonce.chambres }}</span> chambre|<span class="fw-bold">{{ annonce.douches }}</span> bain|<span class="fw-bold">{{ annonce.taille }}</span> mètre carré</div>
+                      <small class="text-muted">{{ annonce.ville }} | {{ annonce.secteur }} | {{ annonce.adresse }}</small>
+                      <div class="d-flex justify-content-between align-items-center mt-2">
+                        <div class="btn-group">
+                          <a href="{% url 'annonce' annonce.id %}" type="button" class="btn btn-sm btn-outline-secondary">Voir</a>
+                        </div>
+                        <small class="text-muted">{{ annonce.date_annonce | timesince }}</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- fin card annonce -->
+              {% endfor%}
+            {% else %}
+            {% endif %}
+
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>CLiquer pour voir</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <nav aria-label="..." class="mt-5">
+            {% if annonces.has_other_pages %}
+            <ul class="pagination">
+              {% if annonce.has_previous %}
+              <li class="page-item disabled">
+                <a href="?page={{ annonces.previous_page_number }}" class="page-link">Previous</a>
+              </li>
+              {% else %}
+              <li class="page-item disable">
+                <a href="" class="page-link">Previous</a>
+              </li>
+              {% endif %}
+              {% for i in annonces.paginator.page_range %}
+              {% if annonces.number == i %}
+              <li class="page-item active" aria-current="page">
+                <a class="page-link" href="">{{ i }}</a>
+              </li>
+              {% else %}
+              <li class="page-item " aria-current="page">
+                <a class="page-link" href="?page={{ i }}">{{ i }}</a>
+              </li>
+              {% endif %}
+              {% endfor %}
+              <!-- <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          {% endif %}
+          </nav>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+    
+
+    
+
+</main>
+{% endblock content %}

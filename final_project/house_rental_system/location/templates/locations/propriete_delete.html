@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h1>Delete proriety</h1>
+<form action="{% url 'location.propriete_delete' post.pk %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    Are you sure you want to delete the following propriety?<br><br>
+    {{ post.categorie.nom }}<br><br>
+    <button class="button" type="submit">Delete</button>
+    <a href="{% url 'location.propriete_get_all' %}">Cancel</a>
+</form>
+{% endblock %}

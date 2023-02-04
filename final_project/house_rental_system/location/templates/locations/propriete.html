@@ -1,0 +1,45 @@
+{% extends 'base.html'%}
+
+{% block content %}
+    <!-- Right Column -->
+    <div class="w3-twothird w3-display-middle">
+    
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Propriete</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>Informations </b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i> <span class="w3-tag w3-teal w3-round">Period</span> - rental.rental_date </h6>
+            <div>Taille : {{ propriete.taille }} mètres carrée</div>
+            <div>Nombre de chambre : {{ propriete.chambres }}</div>
+            <div>{{ propriete.categorie.nom }}</div>
+            <p> {{ propriete.decrire }}</p>
+            <hr>
+          </div>
+          <div class="w3-cont ainer">
+            <a href="" style = "text-decoration:none;">
+                <h5 class="w3-opacity"><b>Resumé</b></h5>
+                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i> Description </h6>
+            </a>
+            <div>locataire preféré : {{ propriete.description.locataire_prefere }}</div>
+            <div>garage : {{ propriete.description.garage }}</div>
+            <hr>
+          </div>
+          <!-- <div class="w3-container">
+            <a href="" style = "text-decoration:none;">
+                <h5 class="w3-opacity"><b>Vehicle informations</b></h5>
+                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Created date :  rental.vehicle.date_created </h6>
+            </a>
+            {%if rental.vehicle.rented == True %}
+            <h6 class="w3-text-red"><i class="fa fa-calendar fa-fw w3-margin-right"></i> <span class="w3-tag w3-teal w3-round">Status</span>   rented</h6>
+            {% endif %}
+
+            <p>Type :  rental.vehicle.vehicle_type  - Real cost :  rental.vehicle.real_cost - Size :  rental.vehicle.size </p><br>
+
+            {%if rental.vehicle.rented == True %}
+                <a href="" class="w3-btn w3-white w3-border w3-border-black w3-round-large w3-hover-teal" style="margin:10px;text-decoration:none;">return vehicle</a>
+            {% endif %}
+
+          </div> -->
+    </div>
+  
+{% endblock %}

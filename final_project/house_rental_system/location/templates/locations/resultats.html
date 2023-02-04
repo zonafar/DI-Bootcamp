@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="d-flex justify-content-center" style="margin-top: 10%;">
+    <div class="card" style="width: 60%;">
+        <div class="card-header">
+        Rental
+        </div>
+        <ul class="list-group list-group-flush">
+        {% for prpt in proprietes %}
+            <li class="list-group-item d-flex justify-content-between">
+                <a  href=""> {{ prpt.taille }} sqft {{ prpt.categorie.nom }}</a> 
+                <p>Chambres : {{ prpt.chambres }}</p>
+                <p>Situer au secteur : {{ prpt.secteur.nom }} de {{ prpt.secteur.ville.nom }}</p>
+            </li>
+        {% endfor %}
+        </ul>
+        <div class="card-footer">
+            Footer
+        </div>
+    </div>
+</div>
+{% endblock %}

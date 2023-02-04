@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}         
+{% block content %}
+<section id="register" class="bg-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card">
+            <div class="card-header  text-white" style="background-color: #ee8133;">
+              <h4>
+                <i class="fas fa-user-plus"></i> Connexion</h4>
+            </div>
+            <div class="card-body py-5">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form|crispy }}                    
+                    <button class="btn btn-primary" type="submit">Register</button>
+                </form>
+                <p class="text-center mt-3">Si vous n'avez pas de compte, <a href="{% url 'register' %}">créer un compte</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+{% endblock content %} 

@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h1>Edit propriete</h1>
+<form action="{% url 'location.propriete_edit' post.pk %}"
+      method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+<button class="button" type="submit">Update</button>
+</form>
+{% endblock %}

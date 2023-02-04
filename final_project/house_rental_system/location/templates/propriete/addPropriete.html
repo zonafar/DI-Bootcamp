@@ -1,0 +1,59 @@
+
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+
+
+{% block form %}
+<div class="card w-75 p-3 mb-4 mt-5 bg-body rounded mx-auto">
+    <div class="card-body fs-2 text-center">
+      Ajouter une propriete
+    </div>
+</div>
+
+<div  class="shadow w-75 p-3 mb-5  bg-body rounded mx-auto" style="padding: 50px;">
+    
+    <form method="post" class="row g-3">
+        {% csrf_token %}
+        <div class="col-md-6">
+            {{ form.taille|as_crispy_field }}
+        </div>
+        <div class="col-md-6">
+            {{ form.chambres|as_crispy_field }}
+        </div>
+
+        <div class="col-md-4">
+            {{ form.image_1|as_crispy_field }}
+        </div>
+        <div class="col-md-4">
+            {{ form.image_2|as_crispy_field }}
+        </div>
+        <div class="col-md-4">
+            {{ form.image_3|as_crispy_field }}
+        </div>
+        <div class="col-md-4">
+            {{ form.proprietaire|as_crispy_field }}
+        </div>
+        <div class="col-md-4">
+            {{ form.secteur|as_crispy_field }}
+        </div>
+        <div class="col-md-4">
+            {{ form.categorie|as_crispy_field }}
+        </div>
+        <div class="col-12">
+            {{ form.decrire|as_crispy_field }}
+        </div>
+        {{ form.publier|as_crispy_field }}
+
+
+        <div class="d-grid mb-3 gap-2 col-6 mx-auto">
+            <button type="submit" class="btn btn-outline-dark">Soumettre</button>
+            <a href="" type="submit" class="btn btn-outline-secondary">Annuler</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+
+
