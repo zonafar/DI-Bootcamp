@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+
+{% block content %}
+    <!-- Right Column -->
+    <div class="w3-twothird w3-display-middle">
+    
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Vehicle</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b>{{vehicle.vehicle_type }}</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i> <span class="w3-tag w3-teal w3-round">Creation Period</span> - {{ vehicle.date_created }} </h6>
+            <p> Return date rental.return_date 
+            <hr>
+          </div>
+          <div class="w3-container">
+            <a href="" style = "text-decoration:none;">
+                <h5 class="w3-opacity"><b>Customer profil</b></h5>
+                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i> rental.customer.first_name   rental.customer.last_name </h6>
+            </a>
+            <p> Country :   rental.customer.country   - city :   rental.customer.city   - email :   rental.customer.email   - phone number :   rental.customer.phone_number   - address :   rental.customer.address  </p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <a href="">
+                <h5 class="w3-opacity"><b>Vehicle informations</b></h5>
+                <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Created date :  rental.vehicle.date_created </h6>
+            </a>
+            <p>Type :  rental.vehicle.vehicle_type  - Real cost :  rental.vehicle.real_cost - Size :  rental.vehicle.size </p><br>
+          </div>
+    </div>
+  
+{% endblock %}

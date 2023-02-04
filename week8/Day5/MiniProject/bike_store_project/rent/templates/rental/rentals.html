@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="d-flex justify-content-center" style="margin-top: 10%;">
+    <div class="card" style="width: 60%;">
+        <div class="card-header">
+        Rental
+        </div>
+        <ul class="list-group list-group-flush">
+        {% for rental in rentals %}
+            <li class="list-group-item d-flex justify-content-between">
+                <a href="{% url 'rent.rental' rental.pk %}" class="text-muted">{{ rental.return_date }}</a> 
+                <a href="{% url 'rent.rental' rental.pk %}" class="">{{ rental.vehicle.vehicle_type }}</a> 
+                <a  href=""> {{ rental.customer.first_name }} {{ rental.customer.last_name }}</a> 
+            </li>
+        {% endfor %}
+        </ul>
+        <div class="card-footer">
+            Footer
+        </div>
+    </div>
+</div>
+{% endblock %}
