@@ -1,0 +1,11 @@
+header.masthead {
+    padding-top: 1.5rem;
+    padding-bottom: 9rem;
+    text-align: center;
+    color: #fff;
+    background-image: url("https://media.istockphoto.com/id/1357040608/fr/photo/freelancer-travaillant-sur-son-poste-de-travail-cr%C3%A9atif.jpg?b=1&s=170667a&w=0&k=20&c=WKfFBc1PUU44l5Fhvl1EVbM5ogNajzUzFZf34SUO9_s=");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+  }
